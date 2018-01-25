@@ -2,12 +2,24 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
   <context id="context1">
+  
+      <commentGenerator >  
+            <property name="suppressAllComments" value="false"/><!-- 是否取消注释 -->  
+            <property name="suppressDate" value="false" /> <!-- 是否生成注释代时间戳-->  
+       </commentGenerator> 
+        
     <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/cuit" driverClass="com.mysql.jdbc.Driver" password="123456" userId="root" />
+    
+      <javaTypeResolver>  
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->  
+            <property name="forceBigDecimals" value="false"/>  
+        </javaTypeResolver>  
+      
     <javaModelGenerator targetPackage="cn.edu.cuit.model" targetProject="GSGTMSystem" />
     <sqlMapGenerator targetPackage="cn.edu.cuit.mapper" targetProject="GSGTMSystem" />
     <javaClientGenerator targetPackage="cn.edu.cuit.dao" targetProject="GSGTMSystem" type="XMLMAPPER" />
     <table  tableName="users">
-      <!-- <columnOverride column="???" property="???" /> schema="???"-->
+   
     </table>
   </context>
 </generatorConfiguration>
