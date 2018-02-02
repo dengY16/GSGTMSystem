@@ -1,0 +1,12 @@
+/* 出数据的首页显示字体大小等 */
+.container{position:relative;padding-left:168px}.container .left-tree{position:absolute;left:0;top:0;bottom:0;padding:10px;width:146px;border:1px solid #bfbfbf}.container .content{padding-left:10px;min-height:200px}.container .content .basic-info{padding:10px}.container .content .tabs-header{background-color:#fff;border-width:0}.container .content .tabs li{border-top:1px solid #bfbfbf;border-radius:3px 3px 0 0}.container .content .tabs li.tabs-selected{border-top:2px solid #1da02b}.container .content .tabs li.tabs-selected a.tabs-inner{color:#000;background-color:#fff}.container .content .tabs li a.tabs-inner{color:#000;background-color:#e3e3e3}.container .content .tabs li a.tabs-inner .tabs-title{font-size:14px}.container .content .column{position:relative;height:23px;border-bottom:1px solid #d4d4d4;margin-bottom:10px}.container .content .column span.current{position:relative;top:0px;display:inline-block;color:#1da02b;font-size:12px;font-weight:bold;height:22px;line-height:22px;border-bottom:2px solid #ff9d02}.container .content table.yes-not.kv-table td.kv-label{width:130px}.container .content table.kv-table{margin-bottom:20px}.container .content table.kv-table td.kv-label{height:26px;font-size:12px}.container .content table.kv-table td.kv-content{height:26px;font-size:12px}.container .content table.kv-table td.kv-content a{color:#1da02b;text-decoration:none}.container .content table.kv-table td.kv-content a:hover{text-decoration:underline}
+
+/* radio和checkbox样式配置 */
+label {font-size:12px;cursor:pointer;}  
+label i {font-size:12px;font-style:normal;display:inline-block;width:12px;height:12px;text-align:center;line-height:12px;color:#fff;vertical-align:middle;margin:-2px 2px 1px 0px;border:#2489c5 1px solid;}  
+
+input[type="checkbox"][class='checkbox'],input[type="radio"][class='checkbox'] {display:none;}  
+input[type="radio"][class='checkbox'] + i {border-radius:7px;}  
+input[type="checkbox"][class='checkbox']:checked + i,input[type="radio"][class='checkbox']:checked + i {background:#2489c5;}  
+input[type="checkbox"][class='checkbox']:disabled + i,input[type="radio"][class='checkbox']:disabled + i {border-color:#ccc;}  
+input[type="checkbox"][class='checkbox']:checked:disabled + i,input[type="radio"][class='checkbox']:checked:disabled + i {background:#ccc;}  

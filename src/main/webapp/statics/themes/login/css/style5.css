@@ -1,0 +1,434 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav,
+	section, summary {
+	display: block;
+}
+
+audio, canvas, video {
+	display: inline-block;
+}
+
+audio:not ([controls] ) {
+	display: none;
+	height: 0;
+}
+
+[hidden], template {
+	display: none;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+html, button, input, select, textarea {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	background: transparent;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+code, kbd, pre, samp {
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+q {
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not (:root ) {
+	overflow: hidden;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+	white-space: normal;
+}
+
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+}
+
+button, input {
+	line-height: normal;
+}
+
+button, select {
+	text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"]
+	{
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration
+	{
+	-webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button
+	{
+	height: auto;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	line-height: 1.5;
+}
+
+body, button, input, select, textarea {
+	font-family: Helvetica, Tahoma, Arial, "Microsoft Yahei";
+}
+
+img {
+	vertical-align: middle;
+}
+
+textarea {
+	resize: vertical;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, form {
+	margin: 0;
+}
+
+ul, ol, li, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol {
+	list-style: none outside none;
+}
+
+h1, h2, h3 {
+	line-height: 2;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2.1rem;
+}
+
+h2 {
+	font-size: 1.82rem;
+}
+
+h3 {
+	font-size: 1.638rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5, h6 {
+	font-size: 1.19rem;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+	color: #08c;
+}
+
+a:hover {
+	color: #006699;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+	color: #ccc;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+	color: #ccc;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+	color: #ccc;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+body {
+	background: url(../images/bg.png);
+	background-size: cover;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.tc {
+	text-align: center;
+}
+
+.fl {
+	float: left;
+}
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.ecli {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.logo {
+	margin-top: 10%;
+}
+
+.loginUser_box {
+	width: 47.875%;
+	height: 27.77778%;
+	border-radius: 5px;
+	border: 5px solid rgba(0, 0, 0, 0.2);
+	position: absolute;
+	left: 26%;
+	margin-top: 3%;
+}
+
+.innerWarp {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 4px;
+	border-radius: 5px;
+	background: white;
+}
+
+.innerWarp .left_pic {
+	width: 59.21053%;
+	height: 100%;
+	float: left;
+}
+
+.innerWarp .left_pic img {
+	width: 100%;
+	height: 100%;
+}
+
+.innerWarp .right_login {
+	width: 40.78947%;
+	height: 100%;
+	float: right;
+}
+
+.innerWarp .right_login h3 {
+	width: 100%;
+	background: #eee;
+	height: 3rem;
+	border-top-right-radius: 5px;
+	line-height: 3rem;
+	font-size: 2rem;
+}
+
+.innerWarp .right_login .userName {
+	width: 90%;
+	height: 2.5rem;
+	border-radius: 3px;
+	outline-style: none;
+	border: 1px solid #ddd;
+	margin: 2% 0 6% 0;
+	text-indent: 1.5rem;
+	font-size: 1.4rem;
+	color: #666;
+	background: url(../images/Usericon.png) right 0.5rem center no-repeat;
+}
+
+.innerWarp .right_login .userPass {
+	width: 90%;
+	height: 2.5rem;
+	border-radius: 3px;
+	outline-style: none;
+	border: 1px solid #ddd;
+	margin: 2% 0;
+	text-indent: 1.5rem;
+	font-size: 1.4rem;
+	color: #666;
+	background: url(../images/Keyicon.png) right 0.8rem center no-repeat;
+}
+
+.innerWarp .right_login .chk_wrap {
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 2%;
+	color: #666;
+}
+
+.innerWarp .right_login .chk_wrap label {
+	cursor: pointer;
+}
+
+.innerWarp .right_login .chk_wrap input {
+	vertical-align: middle;
+	outline-style: none;
+}
+
+.innerWarp .right_login .btn_wrap {
+	width: 90%;
+	margin-left: 5%;
+}
+
+.innerWarp .right_login .btn_wrap .forget {
+	color: #999;
+	text-decoration: underline;
+	float: left;
+}
+
+.innerWarp .right_login .btn_wrap .btn {
+	float: right;
+	padding: .1rem 2rem;
+	font-size: 1.4rem;
+	color: white;
+	background: #4ea8e1;
+	border-radius: 3px;
+}
+
+.innerWarp .right_login .btn_wrap .btn:hover {
+	background: #41a2df;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+}
+
+.bottom a {
+	color: #11588d;
+}
+
+.bottom .p1 a {
+	border-left: 1px solid #11588d;
+	padding: 0 1rem;
+}
+
+.bottom .p2 {
+	margin-top: 0.5rem;
+}

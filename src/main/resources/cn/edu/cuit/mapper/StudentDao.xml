@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.cuit.student.dao.StudentDao">
+  <resultMap id="BaseResultMap" type="cn.edu.cuit.vo.StudentInfoVo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="student_name" jdbcType="VARCHAR" property="studentName" />
+    <result column="student_code" jdbcType="VARCHAR" property="studentCode" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="VARCHAR" property="age" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="major_class" jdbcType="VARCHAR" property="majorClass" />
+    <result column="teacher_code" jdbcType="VARCHAR" property="teacherCode" />
+    <result column="teacher_name" jdbcType="VARCHAR" property="teacherName" />
+    <result column="del_flag" jdbcType="VARCHAR" property="delFlag" />
+    <result column="class_name" jdbcType="VARCHAR" property="className" />
+    <result column="create_user" jdbcType="VARCHAR" property="createUser" />
+    <result column="create_date" jdbcType="DATE" property="date" />
+    <result column="last_modify_user" jdbcType="VARCHAR" property="lastModifyUser" />
+    <result column="last_modify_date" jdbcType="DATE" property="lastModifyDate" />
+  </resultMap>
+  
+  <select id="selectStudent" parameterType="java.lang.String" resultMap="BaseResultMap">
+      SELECT
+	    stu.id,
+	    student_code,
+	    student_name,
+	    major_class,
+	    sex,
+	    age,
+	    phone,
+	    class_name,
+	    create_date
+      FROM
+	     student_info stu
+      LEFT JOIN
+         major_class mc 
+      ON 
+         stu.major_class = mc.class_code
+      WHERE
+	     del_flag = 0
+	     <if test="majorClass != null and majorClass != ''">
+	         AND stu.major_class = #{majorClass}
+	     </if>
+	     <if test="keyword != null and keyword != ''">
+	         AND (student_name LIKE concat('%', #{keyword}, '%') 
+	           OR student_code LIKE concat('%', #{keyword}, '%'))
+	     </if>
+     ORDER BY
+	    student_code
+  </select>
+  <update id="remove" parameterType="java.lang.Integer">
+     UPDATE 
+        student_info
+     SET 
+        del_flag = 1
+     WHERE
+	    id = #{id,jdbcType=INTEGER}
+  </update>
+   <update id="modify" parameterType="cn.edu.cuit.model.StudentInfo">
+    UPDATE 
+       student_info
+    SET
+       student_name = #{studentName,jdbcType=VARCHAR},
+       student_code = #{studentCode,jdbcType=VARCHAR},
+       sex = #{sex,jdbcType=VARCHAR},
+       age = #{age,jdbcType=VARCHAR},
+       phone = #{phone,jdbcType=VARCHAR},
+       major_class = #{majorClass,jdbcType=VARCHAR},
+       last_modify_user = #{lastModifyUser,jdbcType=VARCHAR},
+       last_modify_date = #{lastModifyDate,jdbcType=DATE}
+    WhERE
+       id = #{id,jdbcType=INTEGER}
+  </update>
+  </mapper>

@@ -14,7 +14,7 @@
 	<!--<context:property-placeholder location="classpath:upload.properties" ignore-unresolvable="true"/>-->
 
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-	<context:component-scan base-package="com.boco.emr"/>
+	<context:component-scan base-package="cn.edu.cuit"/>
 	<aop:aspectj-autoproxy/>
 	<!-- 解决转json中文乱码 -->
 	<mvc:annotation-driven>
@@ -51,9 +51,9 @@
 	</bean>
 
 	<!-- 多部分文件上传 -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="104857600" />
 		<property name="maxInMemorySize" value="4096" />
 		<property name="defaultEncoding" value="UTF-8"></property>
-	</bean>
+	</bean> -->
 </beans>
